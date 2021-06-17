@@ -10,6 +10,8 @@ const startTimerBtn = document.querySelector("#start-timer");
 const stopTimerBtn = document.querySelector("#stop-timer");
 const resetTimerBtn = document.querySelector("#reset-timer");
 
+
+
 startTimerBtn.addEventListener("click", function () {
 
 	if (stopTime === true) {
