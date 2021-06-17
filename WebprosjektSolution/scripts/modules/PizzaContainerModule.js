@@ -2,7 +2,7 @@ const PizzaContainerModule = (function () {
   //Creating Pizza Array
   let pizzaContainer = [
     {
-      img: "images/meny/Pizzas/ufo.jpg",
+      img: "images/meny/pizzas/ufo.jpg",
       name: "Ufo",
       description: "Flyvende pizza toppet med pepperoni, skinke og ananas",
       allergies: "Melk, nøtter, hvete",
@@ -10,7 +10,7 @@ const PizzaContainerModule = (function () {
       price: 169,
     },
     {
-      img: "images/meny/Pizzas/kebabpizza.jpg",
+      img: "images/meny/pizzas/kebabpizza.jpg",
       name: "Carolina reaper triple cheese",
       description:
         "Landets sterkeste pizza. Kjøttdeig, løk, carolina reaper krydder, trippel ost",
@@ -19,7 +19,7 @@ const PizzaContainerModule = (function () {
       price: 200,
     },
     {
-      img: "images/meny/Pizzas/svensken.jpg",
+      img: "images/meny/pizzas/svensken.jpg",
       name: "Svensken",
       description: "Simpel pizza med skinke, ost og sopp",
       allergies: "Melk, nøtter, soya.",
@@ -27,7 +27,7 @@ const PizzaContainerModule = (function () {
       price: 189,
     },
     {
-      img: "images/meny/Pizzas/donjuan.jpg",
+      img: "images/meny/pizzas/donjuan.jpg",
       name: "Don Juan",
       description: "Biffstrimler, sopp og løk",
       allergies: "Gluten, hvete",
@@ -35,7 +35,7 @@ const PizzaContainerModule = (function () {
       price: 199,
     },
     {
-      img: "images/meny/Pizzas/viking.jpg",
+      img: "images/meny/pizzas/viking.jpg",
       name: "Viking",
       description: "Biff, paprika, løk og ananas. Toppet med bernaise",
       allergies: "Gluten, egg og laktose",
@@ -43,7 +43,7 @@ const PizzaContainerModule = (function () {
       price: 199,
     },
     {
-      img: "images/meny/Pizzas/nomeat.jpg",
+      img: "images/meny/pizzas/nomeat.jpg",
       name: "Hawaii",
       description: "biff, pepperoni, løk",
       allergies: "Gluten, egg og laktose",
@@ -51,7 +51,7 @@ const PizzaContainerModule = (function () {
       price: 189,
     },
     {
-      img: "images/meny/Pizzas/tacospesial.jpg",
+      img: "images/meny/pizzas/tacospesial.jpg",
       name: "Tacospesial",
       description: "Kjøttdeig, mais, paprika, løk, jalapenos og tortillachips",
       allergies: "Gluten, egg og laktose",
@@ -59,7 +59,7 @@ const PizzaContainerModule = (function () {
       price: 199,
     },
     {
-      img: "images/meny/Pizzas/fourcheese.jpg",
+      img: "images/meny/pizzas/fourcheese.jpg",
       name: "Vegetariano",
       description: "Tomat og ost",
       allergies: "Gluten, egg og laktose",
@@ -67,7 +67,7 @@ const PizzaContainerModule = (function () {
       price: 199,
     },
     {
-      img: "images/meny/Pizzas/ufo.jpg",
+      img: "images/meny/pizzas/ufo.jpg",
       name: "The Wheelchair",
       description:
         "Vegansk pizza med avocado, oliven, sopp, løk, purreløk, vårløk og oregano",
@@ -76,7 +76,7 @@ const PizzaContainerModule = (function () {
       price: 219,
     },
     {
-      img: "images/meny/Pizzas/kebabpizza.jpg",
+      img: "images/meny/pizzas/kebabpizza.jpg",
       name: "Rango",
       description: "Kjøttdeig, jalapeño, paprika, sopp, mais, tacosaus",
       allergies: "Hvete, egg, soya",
@@ -84,7 +84,7 @@ const PizzaContainerModule = (function () {
       price: 199,
     },
     {
-      img: "images/meny/Pizzas/nomeat.jpg",
+      img: "images/meny/pizzas/nomeat.jpg",
       name: "The No Meat",
       description: "Sopp, paprika, purreløk og oregano",
       allergies: "Hvete, egg, soya",
@@ -92,7 +92,7 @@ const PizzaContainerModule = (function () {
       price: 179,
     },
     {
-      img: "images/meny/Pizzas/svensken.jpg",
+      img: "images/meny/pizzas/svensken.jpg",
       name: "Rune Ali 1949",
       description: "Pepperoni, bacon, løk, tomat",
       allergies: "Hvete, egg, soya",
@@ -100,7 +100,7 @@ const PizzaContainerModule = (function () {
       price: 229,
     },
     {
-      img: "images/meny/Pizzas/fourcheese.jpg",
+      img: "images/meny/pizzas/fourcheese.jpg",
       name: "Fourcheese",
       description: "Mozarella, parmesan, cheddar og blåmuggost",
       allergies: "Hvete, egg, soya",
@@ -108,7 +108,7 @@ const PizzaContainerModule = (function () {
       price: 209,
     },
     {
-      img: "images/meny/Pizzas/donjuan.jpg",
+      img: "images/meny/pizzas/donjuan.jpg",
       name: "No gluten here, bitch!",
       description: "Glutenfri deig, glutenfri ost, biff",
       allergies: "Egg, soya",
@@ -116,7 +116,7 @@ const PizzaContainerModule = (function () {
       price: 299,
     },
     {
-      img: "images/meny/Pizzas/viking.jpg",
+      img: "images/meny/pizzas/viking.jpg",
       name: "Love pizza",
       description:
         "Biff, champinjong, løk, purreløk, oliven, toppet med litt kjærlighet ;)",
@@ -125,7 +125,7 @@ const PizzaContainerModule = (function () {
       price: 179,
     },
     {
-      img: "images/meny/Pizzas/tacospesial.jpg",
+      img: "images/meny/pizzas/tacospesial.jpg",
       name: "Shrimpy love",
       description: "Reke, purreløk, paprika",
       allergies: "Hvete, egg, soya",
