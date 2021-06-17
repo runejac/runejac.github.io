@@ -6,22 +6,41 @@ let hour = 0;
 let ms = 0;
 let stopTime = true;
 
+
 const startTimerBtn = document.querySelector("#start-timer");
 const stopTimerBtn = document.querySelector("#stop-timer");
 const resetTimerBtn = document.querySelector("#reset-timer");
 
+let wakeLock = null;
 
 
-startTimerBtn.addEventListener("click", function () {
 
-	if (stopTime === true) {
-		stopTime = false;
-		timerCycle();
-		startTimerBtn.style.display = "none";
+// START function
+navigator.wakeLock = undefined;
+
+startTimerBtn.addEventListener("click", async function () {
+
+	try {
+		wakeLock = await navigator.wakeLock.request('screen');
+		startTimerBtn.textContent = 'Wake Lock is active!';
+		if (stopTime === true) {
+			stopTime = false;
+			timerCycle();
+			startTimerBtn.style.display = "none";
+		}
+
+	} catch (err) {
+		// The Wake Lock request has failed - usually system related, such as battery.
+		startTimerBtn.textContent = `${err.name}, ${err.message}`;
 	}
+
+
+
+
 
 })
 
+// STOP function
 stopTimerBtn.addEventListener("click", function () {
 
 	if (stopTime === false) {
@@ -31,7 +50,7 @@ stopTimerBtn.addEventListener("click", function () {
 
 })
 
-
+// RESET function
 resetTimerBtn.addEventListener("click", function () {
 	timer.innerHTML =   "00<span style=\"color: darkcyan\">:</span>" +
 						"<span style='font-size: 100px;'>00</span>" +
