@@ -29,7 +29,6 @@ startTimerBtn.addEventListener("click", async function () {
 		// The Wake Lock request has failed - usually system related, such as battery.
 		startTimerBtn.textContent = `${err.name}, ${err.message}`;
 	}
-
 })
 
 // STOP function
@@ -45,7 +44,6 @@ stopTimerBtn.addEventListener("click", function () {
 		.then(() => {
 			wakeLock = null;
 		});
-
 })
 
 // RESET function
@@ -68,7 +66,6 @@ resetTimerBtn.addEventListener("click", function () {
 		.then(() => {
 			wakeLock = null;
 		});
-
 })
 
 
@@ -98,7 +95,6 @@ function timerCycle() {
 		}
 
 
-
 		if (ms < 10 || ms === 0) {
 			ms = "0" + ms;
 		}
@@ -120,6 +116,4 @@ function timerCycle() {
 		setTimeout(timerCycle, 10);
 
 	}
-
-
 }
