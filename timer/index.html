@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"><!--Bulma Framework-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css"><!--CSS external page-->
+</head>
+<body>
+
+	<div class="container">
+
+		<div id="stopwatch">
+			00<span style="color: darkcyan">:</span><span style="font-size: 100px;">00</span><span style="color:darkcyan">:</span><span style="font-size: 100px;">00</span><span style="color:darkcyan">:</span>00
+		</div>
+		
+		<div>
+		
+			<ul id="stop-and-reset-buttons" class="is-flex">
+				<li><button id="stop-timer" class="button is-large is-danger is-light">Pause</button></li>
+				<li><button id="reset-timer" class="button is-large is-warning is-light">Reset</button></li>
+			</ul>
+			
+			<ul id="start-button">
+				<li><button id="start-timer" class="button is-large is-fullwidth is-success is-light">Start</button></li>
+			</ul>
+		
+		</div>
+	
+	</div>
+	
+	<script src="main.js"></script>
+
+</body>
+</html>
+

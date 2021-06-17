@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#stopwatch {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline;
+}
+#stop-and-reset-buttons {
+    padding: 10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#stop-and-reset-buttons li {
+    position: relative;
+    top: 11rem;
+    display: inline;
+    padding-left: 10px;
+}
+
+#start-button li {
+    position: relative;
+    top: 10rem;
+    display: inline;
+    padding-left: 10px;
+}
+
+#start-button {
+    width: 228px;
+    padding: 9px;
+    position: absolute;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
