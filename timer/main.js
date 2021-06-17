@@ -11,32 +11,24 @@ const startTimerBtn = document.querySelector("#start-timer");
 const stopTimerBtn = document.querySelector("#stop-timer");
 const resetTimerBtn = document.querySelector("#reset-timer");
 
+// variable that prevent phone to go into idle mode
 let wakeLock = null;
-
-
-
-// START function
 navigator.wakeLock = undefined;
 
+// START function
 startTimerBtn.addEventListener("click", async function () {
 
 	try {
 		wakeLock = await navigator.wakeLock.request('screen');
-		startTimerBtn.textContent = 'Wake Lock is active!';
 		if (stopTime === true) {
 			stopTime = false;
 			timerCycle();
 			startTimerBtn.style.display = "none";
 		}
-
 	} catch (err) {
 		// The Wake Lock request has failed - usually system related, such as battery.
 		startTimerBtn.textContent = `${err.name}, ${err.message}`;
 	}
-
-
-
-
 
 })
 
@@ -47,6 +39,12 @@ stopTimerBtn.addEventListener("click", function () {
 		stopTime = true;
 		startTimerBtn.style.display = "";
 	}
+
+	// makes the phone go into idle if stop is clicked
+	wakeLock.release()
+		.then(() => {
+			wakeLock = null;
+		});
 
 })
 
@@ -64,6 +62,13 @@ resetTimerBtn.addEventListener("click", function () {
 	sec = 0;
 	min = 0;
 	startTimerBtn.style.display = "";
+
+	// makes the phone go into idle if reset is clicked
+	wakeLock.release()
+		.then(() => {
+			wakeLock = null;
+		});
+
 })
 
 
