@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link href="css/login.css" rel="stylesheet">
+    <title>Innlogging</title>
+
+</head>
+
+<body>
+
+    <!--Full body-->
+    <div class="hero is-primary is-fullheight">
+        <div class="hero-body">
+
+            <!--Container for logo and box-->
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-4">
+
+                        <!-- Logo -->
+                        <section class="columns is-centered pizza-logo">
+                            <img id="logo-img" class="column is-6" src="images/logo/pizzalogo.png" alt="logo-img">
+                        </section>
+                        <section class="columns is-centered pizza-logo">
+                            <h3 id="login-brand-name" class="c-font">Gyldne Pizza Portalen</h3>
+                        </section>
+
+                        <!--Container for Login box-->
+                        <form class="box">
+
+                            <!--Input field for email-->
+                            <div class="field">
+                                <label class="label c-font">
+                                E-post
+                                </label>
+                                <div class="control has-icons-left">
+                                    <input type="email" class="input" placeholder="navn@gyldnepizza.no">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!--Input field for password-->
+                            <div class="field">
+                                <label class="label c-font">Passord</label>
+                                <div class="control has-icons-left">
+                                    <input type="password" class="input" placeholder="passord">
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!--Field for checkbox-->
+                            <div class="field">
+                                <label class="label c-font">
+                                    <input type="checkbox" class="checkbox">
+                                    Husk meg
+                                </label>
+                            </div>
+
+                            <!--Login button and forgot password button-->
+                            <div class="field">
+                                <div class="field level-left">
+                                    <a id="loginbtn" class="button is-success c-font" href="index.html">Logg inn</a>
+                                    <div class="column level-right">
+                                        <a class="btn btn-link level-right c-font" id="forgotbtn" href="forgotpassword.html">Glemt passord?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

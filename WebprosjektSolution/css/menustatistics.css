@@ -1,0 +1,103 @@
+/* Custom font */
+@font-face {
+    font-family: coco;
+    src: url(../font/coco_gothic/CocoGothic_trial.ttf);
+}
+
+/* Font class */
+.c-font {
+    font-family: coco, sans-serif;
+    font-weight: bold;
+}
+
+/* Background color */
+body {
+    background-color: #f9f9f9;
+    height: 100vh;
+}
+
+/* Styling for all buttons */
+.button {
+    display: inline-block;
+    padding: 0.46em 1.6em;
+    border: 0.1em solid #000000;
+    margin: 0 0.2em;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    transition: all 0.10s;
+}
+
+/*hover effect on buttons*/
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* ----- Main part of page ----- */
+
+/* Buttons */
+#Menu-btn {
+    color: #080808;
+    margin-left: 5px;
+}
+
+#statistics-btn {
+    color: #080808;
+    background-color: #FFDD57;
+}
+
+#drikke-btn {
+    color: #080808;
+    margin-left: -3px;
+}
+
+/* Headline */
+.headline-index {
+    padding: 2%;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Select box in headline */
+.headline-index select {
+    width: 85px;
+    height: 55px;
+    top: -30%;
+
+    border-radius: 5px;
+    border-color: #FFDD57;
+
+    font-size: 35px;
+    font-weight: 500;
+}
+
+/* ----- Table card  ----- */
+.table-card {
+    width: 50%;
+    left: 25%;
+}
+
+/* Headline card */
+#subtitle-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#subtitle-container h2 {
+    max-width: max-content;
+}
+
+/* -----Container for sharebuttons  ----- */
+#share-container {
+    position: absolute;
+    left: 40%;
+    margin-top: 4%;
+    padding-bottom: 25px;
+    transform: scale(1.2);
+}
+
+#share-container button {
+    font-weight: bold;
+    color: #080808;
+}

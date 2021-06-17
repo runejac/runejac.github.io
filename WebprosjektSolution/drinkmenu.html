@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <!--Bulma Framework-->
+  <link href="css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/drinkmenu.css">
+  <link href="css/navbar.css" rel="stylesheet">
+  <script type="module" src="scripts/drinkmenu.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+  <title>Drikke</title>
+</head>
+
+<body>
+  <!-- Navbar script -->
+  <div id="navContainer" style="margin-bottom: 2rem;"></div>
+  <script src="scripts/navbar.js"></script>
+
+  <!--Feedback-field-->
+  <div>
+    <p id="feedback-drink-remove"></p>
+    <p id="feedback-drink-add"></p>
+  </div>
+
+
+  <main class="container">
+    <!--Start of container-->
+
+    <section class="columns">
+      <!--Start of button-section-->
+
+      <article class="column is-3 is-offset-1">
+
+        <section id="button-section">
+
+          <div class="level-left buttons has-addons">
+
+            <a href="menu.html" id="pizza-btn" class="button is-warning is-medium is-outlined c-font">Pizza</a>
+
+            <button id="drikke-btn" class="button is-warning is-medium is-outlined c-font">Drikke</button>
+
+
+          </div>
+
+
+
+
+        </section>
+
+      </article>
+
+      <article class="column is-2 is-offset-5">
+
+        <section>
+
+          <div>
+
+            <button class="button is-medium is-warning c-font" id="modal-btn"><i class="fas fa-plus"></i> Legg
+              til</button>
+
+            <p class="level-right">
+
+            </p>
+
+          </div>
+
+        </section>
+
+        <!--Modal appearing when "Legg til" is clicked-->
+        <div class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <!--Box for input-->
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <!--Adding image-->
+                  <p class="columns is-centered modal-title"> Bilde: </p>
+                  <div class="columns is-centered">
+                    <figure class="image is-128x128">
+                      <img id="beverage-img" src="images/meny/Beverages/toyen.png" alt="leggtilpizza">
+                    </figure>
+                  </div>
+                  <div id="file-js-example" class="file has-name is-centered">
+                    <label class="file-label">
+                      <input class="file-input chooseFile" type="file" name="resume" accept="image/*"
+                        onchange="showMyImage(this)">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Velg fil…
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="content">
+                    <p class="modal-title">
+                      Navn på drikke:
+                    </p>
+
+                    <input class="input is-medium is-rounded" id="beverage-name" type="text">
+
+                    <p class="modal-title">
+                      Ingredienser:
+                    </p>
+
+                    <input class="input is-medium is-rounded" id="beverage-ingreds" type="text">
+
+                    <p class="modal-title">
+                      Pris:
+                    </p>
+
+                    <input class="input is-medium is-rounded" id="beverage-price" type="number">
+                    <section class="columns is-centered" style="margin-top: 10px;">
+                      <button class="button c-font" id="add-btn" style="background-color: #FFDD57;">Legg til</button>
+                    </section>
+                  </div>
+
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="modal-close is-large is-rounded" aria-label="close"></button>
+          <script type="module" src="scripts/drinkmenu.js"></script>
+        </div>
+      </article>
+    </section>
+    <!--End of button-section-->
+
+    <!--Adding drink element-->
+    <section id="card-container" class="columns">
+      <article id="drink-list" class="column is-10"></article>
+    </section>
+
+    <!--Modal edit-->
+    <div class="modal" id="modal-2">
+      <div class="modal-background" id="modal-background2"></div>
+      <div class="modal-content" id="edit-content">
+
+        <section class="columns is-centered" style="margin-top: 10px;">
+          <button class="button" style="background-color: #FFDD57;">Bekreft Endring</button>
+        </section>
+      </div>
+    </div>
+
+
+  </main>
+  <!--Script for when add pizza is clicked, to add pizza-->
+  <script src="scripts/modal.js"></script>
+
+  <script>
+    //preview img function
+    function showMyImage(fileInput) {
+      var files = fileInput.files;
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var imageType = /image.*/;
+        if (!file.type.match(imageType)) {
+          continue;
+        }
+        var img = document.getElementById("beverage-img");
+        img.file = file;
+        var reader = new FileReader();
+        reader.onload = (function (aImg) {
+          return function (e) {
+            aImg.src = e.target.result;
+          };
+        })(img);
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+
+</body>
+
+</html>

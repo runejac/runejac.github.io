@@ -1,0 +1,121 @@
+/* Custom font */
+@font-face {
+  font-family: coco;
+  src: url(../font/coco_gothic/CocoGothic_trial.ttf);
+}
+
+/* Font class */
+.c-font {
+  font-family: coco, sans-serif;
+}
+
+/*Background color*/
+body {
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+/* Styling for all buttons */
+.button {
+  background-color: #FFFFFF;
+  border: 0.1em solid #000000;
+
+  padding: 0.46em 1.6em;
+  margin: 0 0.2em;
+
+  border-radius: 0.12em;
+  box-sizing: border-box;
+
+  transition: all 0.10s;
+
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*hover effect on buttons*/
+.button:hover {
+  transform: scale(1.05);
+}
+
+/* ----- Page content ----- */
+
+.content {
+  padding: 16px;
+}
+
+/* Headline */
+.headline-index {
+  padding: 2%;
+
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Select box in headline */
+.headline-index select {
+  width: 85px;
+  height: 55px;
+  top: -30%;
+
+  border-radius: 5px;
+  border-color: #FFDD57;
+
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  text-align: center;
+
+  width: 100%;
+}
+
+/* Cards */
+.index-container>div {
+  margin-top: 2%;
+  width: 40%;
+
+  animation: moveInFromTop 0.5s ease-in 0s forwards;
+}
+
+#chart-card {
+  min-width: 675px;
+}
+
+#chart {
+  max-width: 100%;
+}
+
+/* Share buttons */
+#share-container {
+  margin-top: 4%;
+  padding-bottom: 9%;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+#share-container button {
+  font-size: 20px;
+  padding: 1.5%;
+}
+
+/* ----- Animation ----- */
+@keyframes moveInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}

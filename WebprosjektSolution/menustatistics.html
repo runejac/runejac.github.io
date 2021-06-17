@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <!--Bulma Framework-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/menustatistics.css" rel="stylesheet">
+  <title>MenyStatistikk</title>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navbar script -->
+  <div id="navContainer" style="margin-bottom: 2rem;"></div>
+  <script src="scripts/navbar.js"></script>
+
+  <!-- Main -->
+  <main class="container">
+    <section class="columns">
+      <article class="column is-3 is-offset-1">
+        <section>
+
+          <!-- Pizza and drink menu buttons -->
+          <div class="level-left buttons has-addons">
+
+            <!-- Pizza -->
+            <a href="menu.html" id="Menu-btn" class="button is-warning is-medium is-outlined c-font">Pizza
+            </a>
+
+            <!-- Drink -->
+            <a href="drinkmenu.html" id="drikke-btn" class="button is-warning is-medium is-outlined c-font">Drikke
+            </a>
+
+            <!-- End pizza drink menu buttons -->
+          </div>
+
+        </section>
+      </article>
+
+      <article class="column is-1 is-offset-1">
+        <!-- Pizza statistics button-->
+        <a href="menustatistics.html" id="statistics-btn"
+          class="button is-warning is-medium is-outlined c-font">Pizza-Statistikk
+        </a>
+      </article>
+    </section>
+
+    <section>
+
+      <!-- Headline index -->
+      <div class="headline-index">
+        <h1 class="title is-1 c-font">
+          De siste
+
+          <!-- Dropdown selector with amount of days -->
+          <select name="display-chart" id="display-chart" onchange="refreshCharts()">
+            <option value="30" selected>30</option>
+            <option value="7">7</option>
+            <option value="14">14</option>
+            <option value="90">90</option>
+            <option value="365">365</option>
+          </select>
+
+          dagene
+        </h1>
+      </div>
+
+      <!-- Table card -->
+      <div class="card table-card">
+        <div class="card-content">
+
+          <!-- Headline card -->
+          <div id="subtitle-container">
+            <h2 class="subtitle" id="summary"></h2>
+            <h2 class="subtitle" id="summary2"></h2>
+          </div>
+
+          <!-- Table -->
+          <div id="table-div"></div>
+        </div>
+
+        <!-- End table card-->
+      </div>
+
+      <!-- Buttons for sharing -->
+      <div id="share-container">
+        <button id="share" class="button is-warning c-font">Del rapport</button>
+        <button onclick="window.print()" class="button is-warning c-font">Skriv ut</button>
+      </div>
+      <!-- Script for share buttons -->
+      <script src="scripts/restaurant-share.js"></script>
+
+    </section>
+
+    <!-- End main-->
+  </main>
+
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    // Amount of pizzas sold in 1 day
+    var pizza1 = 295;
+    var pizza2 = 250;
+    var pizza3 = 218;
+    var pizza4 = 180;
+    var pizza5 = 142;
+    var pizza6 = 81;
+    var pizza7 = 68;
+    var pizza8 = 65;
+    var pizza9 = 59;
+    var pizza10 = 52;
+    var pizza11 = 43;
+    var pizza12 = 34;
+    var pizza13 = 26;
+    var pizza14 = 17;
+    var pizza15 = 11;
+    var pizza16 = 2;
+
+    // Triggered when select box is changed
+    function refreshCharts() {
+
+      // Clears earlier chart and tables
+      document.getElementById("table-div").innerHTML = "";
+
+      // Creates new chart and tables
+      drawTable();
+    }
+
+    // Loads table from google
+    google.charts.load('current', {
+      'packages': ['table']
+    });
+    google.charts.setOnLoadCallback(drawTable);
+
+    function drawTable() {
+
+      // Gets value from select box, is 30 by default
+      var timeline = document.getElementById("display-chart").value;
+      var timeline = parseInt(timeline);
+
+      // Amount of pizzas sold = pizzas sold in 1 day * amount of days chosen
+      const pizza1value = pizza1 * timeline;
+      const pizza2value = pizza2 * timeline;
+      const pizza3value = pizza3 * timeline;
+      const pizza4value = pizza4 * timeline;
+      const pizza5value = pizza5 * timeline;
+      const pizza6value = pizza6 * timeline;
+      const pizza7value = pizza7 * timeline;
+      const pizza8value = pizza8 * timeline;
+      const pizza9value = pizza9 * timeline;
+      const pizza10value = pizza10 * timeline;
+      const pizza11value = pizza11 * timeline;
+      const pizza12value = pizza12 * timeline;
+      const pizza13value = pizza13 * timeline;
+      const pizza14value = pizza14 * timeline;
+      const pizza15value = pizza15 * timeline;
+      const pizza16value = pizza16 * timeline;
+
+      // Value of everything combined
+      const pizzaValueAll = pizza1value + pizza2value + pizza3value + pizza4value + pizza5value + pizza6value +
+        pizza7value + pizza8value + pizza9value + pizza10value + pizza11value + pizza12value + pizza13value +
+        pizza14value + pizza15value + pizza16value;
+
+      // profit from pizzas sold = pizzas sold in x amount of days * price
+      const profit1 = pizza1value * 189;
+      const profit2 = pizza2value * 199;
+      const profit3 = pizza3value * 229;
+      const profit4 = pizza4value * 179;
+      const profit5 = pizza5value * 199;
+      const profit6 = pizza6value * 199;
+      const profit7 = pizza7value * 199;
+      const profit8 = pizza8value * 200;
+      const profit9 = pizza9value * 169;
+      const profit10 = pizza10value * 199;
+      const profit11 = pizza11value * 219;
+      const profit12 = pizza12value * 209;
+      const profit13 = pizza13value * 179;
+      const profit14 = pizza14value * 899;
+      const profit15 = pizza15value * 189;
+      const profit16 = pizza16value * 299;
+
+      // Value of everything combined
+      const profitAll = profit1 + profit2 + profit3 + profit4 + profit5 + profit6 + profit7 + profit8 + profit9 +
+        profit10 + profit11 + profit12 + profit13 + profit14 + profit15 + profit16;
+
+      // Table columns names: pizza name, amount sold, profit 
+      let data = new google.visualization.DataTable();
+      data.addColumn('string', 'Navn på pizza');
+      data.addColumn('number', 'Salg');
+      data.addColumn('number', 'Profitt');
+      data.addRows([
+        ['Hawaii', pizza1value, profit1],
+        ['Viking', pizza2value, profit2],
+        ['Rune Ali 1949', pizza3value, profit3],
+        ['Love pizza', pizza4value, profit4],
+        ['Rango', pizza5value, profit5],
+        ['Don Juan', pizza6value, profit6],
+        ['Tacospesial', pizza7value, profit7],
+        ['Caroline reaper triple cheese', pizza8value, profit8],
+        ['Ufo', pizza9value, profit9],
+        ['Vegetariano', pizza10value, profit10],
+        ['The Wheelchair', pizza11value, profit11],
+        ['Fourcheese', pizza12value, profit12],
+        ['The No Meat', pizza13value, profit13],
+        ['Shrimpy love', pizza14value, profit14],
+        ['Svensken', pizza15value, profit15],
+        ['No gluten here', pizza16value, profit16]
+
+      ]);
+
+      let table = new google.visualization.Table(document.getElementById('table-div'));
+
+      // Format for column 3
+      let formatter = new google.visualization.NumberFormat({
+        suffix: ' kr',
+        fractionDigits: 0
+      });
+      formatter.format(data, 2);
+
+      table.draw(data, {
+        showRowNumber: true,
+        width: '100%',
+        height: '100%'
+      });
+
+      // Headlines
+      document.getElementById("summary").innerHTML = `
+        Pizza solgt totalt: ${pizzaValueAll} <br>
+      `;
+
+      document.getElementById("summary2").innerHTML = `
+        Profit til sammen: ${profitAll} kr
+      `;
+
+      // End draw table
+    }
+
+    // End script
+  </script>
+</body>
+
+</html>

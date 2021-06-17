@@ -1,0 +1,176 @@
+/* ---------- Used for all restaurant pages ---------- */
+
+/* Custom font */
+@font-face {
+    font-family: coco;
+    src: url(../font/coco_gothic/CocoGothic_trial.ttf);
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Font class */
+.c-font {
+    font-family: coco, sans-serif;
+}
+
+.title {
+    font-family: coco, sans-serif;
+}
+
+/* Buttons */
+.button {
+    padding: 0.46em 1.6em;
+    border: 0.1em solid #000000;
+    margin: 0 0.2em 0.2em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    transition: all 0.10s;
+}
+
+/*hover effect on buttons*/
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* ----- Headline ----- */
+.headline-restaurant {
+    padding-top: 2%;
+    text-align: center;
+}
+
+/* Select box in headline */
+.headline-restaurant select {
+    width: 85px;
+    height: 55px;
+    top: -30%;
+
+    border-radius: 5px;
+    border-color: #FFDD57;
+
+    font-size: 35px;
+    font-weight: 500;
+}
+
+/* ----- Page Content ----- */
+#restaurant-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2% 3% 2% 3%;
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+/* ----- Side bar with key information about the restaurant ----- */
+#side {
+    width: 20%;
+}
+
+#info-card {
+    min-width: 270px;
+}
+
+.card-line {
+    border-top: 1px solid #FFDD57;
+}
+
+li {
+    line-height: 3;
+}
+
+/* Google maps */
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 200px;
+    width: 100%;
+}
+
+#gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 200px;
+    width: 100%;
+}
+
+/* Print and share buttons */
+#print-button {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#print-button button {
+    margin-top: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: center;
+    padding: 5%;
+    width: 60%;
+}
+
+
+/* ----- Main content of page with cards ----- */
+.card-container {
+    width: 80%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card-container>div {
+    margin-bottom: 3%;
+}
+
+/* Summary card */
+#average-info {
+    min-height: 410px;
+    width: 30%;
+    min-width: 400px;
+}
+
+#average-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 360px;
+}
+
+#ul2 {
+    text-align: right;
+}
+
+/* Table card */
+#table-card {
+    width: 55%;
+    height: 410px;
+    min-width: 575px;
+}
+
+#table-card div {
+    max-width: 100%;
+}
+
+/* Chart cards */
+.chart-card {
+    width: 45%;
+    min-width: 575px;
+    display: flex;
+    justify-content: center;
+}
+
+#chart div {
+    max-width: 100%;
+}

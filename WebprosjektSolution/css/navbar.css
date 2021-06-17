@@ -1,0 +1,81 @@
+/* Custom font */
+@font-face {
+  font-family: coco;
+  src: url(../font/coco_gothic/CocoGothic_trial.ttf);
+}
+
+/* font class */
+.c-font {
+  font-family: coco, sans-serif;
+}
+
+/* -----Color for navbar  ----- */
+.navbar {
+  background-color: #ffdd57;
+  border-bottom: #ffdd57;
+}
+
+/* ----- Logo and name ----- */
+.brand-name {
+  position: relative;
+  top: 5px;
+  margin-left: 10px;
+
+  font-weight: bold;
+  font-size: 30px;
+  color: #080808;
+}
+
+.navbar-brand {
+  margin-right: 220px;
+}
+
+/* ----- Navbar items styling ----- */
+.navbar-item {
+  font-family: coco, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  float: left;
+
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+.navbar-item:hover {
+  transform: scale(1.05);
+}
+
+/* dropdown menu */
+#dropdowncontainer {
+  font-weight: lighter;
+}
+
+#dropdown-item {
+  font-weight: lighter;
+}
+
+/* log out button */
+#logOut {
+  margin-right: 8px;
+  margin-left: -5px;
+}
+
+/* Navbar links */
+#navbar a {
+  float: right;
+  display: block;
+  padding: 14px;
+
+  color: #080808;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sticky position */
+#navContainer {
+  z-index: 1;
+  top: 0;
+  position: sticky;
+}

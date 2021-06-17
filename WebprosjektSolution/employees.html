@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ansatte</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+	<!--Bulma Framework-->
+	<link href="css/navbar.css" rel="stylesheet">
+	<link href="css/employee.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Navbar script -->
+	<div id="navContainer" style="margin-bottom: 2rem;"></div>
+	<script src="scripts/navbar.js"></script>
+
+	<!--Feedback-field-->
+	<div>
+		<p id="feedback-employee-remove"></p>
+		<p id="feedback-employee-add"></p>
+		<p id="feedback-employee-edit"></p>
+	</div>
+
+	<main>
+		<!--Start of container-->
+		<section id="input-search" class="columns">
+
+			<article class="column is-4 is-three-fifths is-offset-one-fifth">
+
+				<section id="search-section">
+
+					<div>
+
+						<input id="input" class="input is-medium is-rounded is-warning" type="text"
+							placeholder="Søk etter navn">
+
+					</div>
+
+				</section>
+				<!--Search field-->
+
+			</article>
+
+			<article class="column is-1 is-offset-2">
+
+				<section>
+
+					<div>
+
+						<button id="modal-btn" class="button is-warning c-font">
+							<b><i class="fas fa-user-plus"></i> Legg til ny ansatt</b>
+						</button>
+						<!--Desktop button-->
+
+					</div>
+
+				</section>
+				<!--Add new employee button DESKTOP-->
+
+				<div class="modal">
+					<div class="modal-background"></div>
+					<div class="modal-content">
+						<div class="box">
+							<article class="media">
+								<div class="media-content">
+									<p class="columns is-centered modal-title"> Bilde </p>
+									<div class="columns is-centered">
+										<figure class="image is-128x128">
+											<img src="https://bulma.io/images/placeholders/256x256.png"
+												alt="placeholder-image">
+										</figure>
+									</div>
+									<div class="file is-centered">
+										<label class="file-label">
+											<input class="file-input" type="file" name="resume">
+											<span class="file-cta">
+												<span class="file-icon">
+													<i class="fas fa-upload"></i>
+												</span>
+												<span class="file-label">
+													Velg fil...
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="content ">
+										<p class="modal-title">
+											Navn:
+										</p>
+
+										<input class="input is-medium is-rounded" id="employee-name" type="text">
+
+										<p class="modal-title">
+											Stilling:
+										</p>
+										<select class="select is-medium" id="employee-role">
+											<option disabled selected>Velg stilling</option>
+											<option>Medarbeider</option>
+											<option>Renhold</option>
+											<option>Daglig leder</option>
+										</select>
+										<p class="modal-title">
+											Avdeling:
+										</p>
+
+										<select class="select is-medium" id="employee-department">
+											<option disabled selected>Velg avdeling</option>
+											<option>Tøyen</option>
+											<option>Frogner</option>
+											<option>Carl Berner</option>
+											<option>Ullevål</option>
+										</select>
+										<p class="modal-title">
+											E-post:
+										</p>
+
+										<input class="input is-medium is-rounded" id="employee-email" type="text">
+										<p class="modal-title">
+											Mobil:
+										</p>
+
+										<input class="input is-medium is-rounded" id="employee-phonenr" type="text">
+										<p class="modal-title">
+											Adresse:
+										</p>
+
+										<input class="input is-medium is-rounded" id="employee-address" type="text">
+										<p class="modal-title">
+											Fødselsdag:
+										</p>
+
+										<input class="input is-medium is-rounded" id="employee-birthday" type="text">
+										<section class="columns is-centered" style="margin-top: 10px;">
+											<button class="button c-font" id="add-btn"
+												style="background-color: #FFDD57;">Legg til</button>
+										</section>
+									</div>
+
+								</div>
+							</article>
+						</div>
+					</div>
+					<button class="modal-close is-large is-rounded" aria-label="close"></button>
+					<script type="module" src="scripts/employee-search.js"></script>
+				</div>
+
+				<div class="modal" id="modal-2">
+					<div class="modal-background" id="modal-background2"></div>
+					<div class="modal-content" id="edit-content">
+
+
+					</div>
+
+				</div>
+
+			</article>
+
+		</section>
+		<!--End of search field and add new employee button-->
+
+		<script>
+
+		</script>
+
+
+		<div class="container">
+
+			<section class="columns" style="margin-left: 2rem;">
+				<!--Start of filter DESKTOP-->
+
+				<article class="column is-3">
+
+					<aside id="aside" class="menu" style="border: solid 2px #ffdd57;border-radius: 20px;padding:
+					2rem;">
+
+						<ul class="menu-list">
+							<li>
+								<p class="menu-label"><b>Avdeling</b></p>
+								<ul>
+									<li class="field">
+
+										<label class="checkbox" for="carl-berner">
+											<input id="carl-berner" type="checkbox" name="department">
+											<span>Carl Berner</span>
+										</label>
+
+									</li>
+									<li class="field">
+
+										<label class="checkbox" for="tøyen">
+											<input id="tøyen" type="checkbox" name="department">
+											<span>Tøyen</span>
+										</label>
+
+									</li>
+									<li class="field">
+
+										<label class="checkbox" for="ullevål">
+											<input id="ullevål" type="checkbox" name="department">
+											<span>Ullevål</span>
+										</label>
+
+									</li>
+									<li class="field">
+
+										<label class="checkbox" for="frogner">
+											<input id="frogner" type="checkbox" name="department">
+											<span>Frogner</span>
+										</label>
+
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="menu-list">
+							<li>
+								<p class="menu-label"><b>Rolle</b></p>
+								<ul>
+									<li class="field">
+
+										<label class="checkbox" for="manager">
+											<input id="manager" type="checkbox" name="role">
+											<span>Daglig leder</span>
+										</label>
+
+									</li>
+									<li class="field">
+
+										<label class="checkbox" for="employee">
+											<input id="employee" type="checkbox" name="role">
+											<span>Medarbeider</span>
+										</label>
+
+									</li>
+									<li class="field">
+
+										<label class="checkbox" for="cleaning-employee">
+											<input id="cleaning-employee" type="checkbox" name="role">
+											<span>Renhold</span>
+										</label>
+
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div style="margin-top: 2rem;">
+
+							<button id="remove-filter"
+								class="remove-filter-btn menu-label button is-small is-fullwidth is-warning is-rounded "><b><i
+										class="fas fa-sync-alt"></i> Fjern filter</b>
+							</button>
+
+						</div>
+					</aside>
+
+
+
+				</article>
+
+
+				<article id="employee-list" class="column is-9">
+					<!--Start content of each employee-->
+
+				</article>
+				<!--End content of each employee-->
+
+				<article id="search-result" class="column is-9">
+					<!--Start content of each employee-->
+
+				</article>
+				<!--End content of each employee-->
+
+				<article id="filter-result" class="column is-9">
+					<!--Start content of each employee-->
+
+				</article>
+				<!--End content of each employee-->
+
+			</section>
+			<!--End of filter DESKTOP-->
+
+		</div>
+
+	</main>
+	<script src="scripts/modal.js"></script>
+
+	<script type="module" src="scripts/employee.js"></script>
+
+
+</body>
+
+</html>
