@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    background-color: #232323;
+    color: ghostwhite;
+    font-family: "Lucida Sans", sans-serif;
+
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.square {
+    float: left;
+    width: 30%;
+    padding-bottom: 30%;
+    background-color: purple;
+    margin: 1.6%;
+    border-radius: 15%;
+    transition: background-color 0.2s;
+}
+
+h1 {
+    color: ghostwhite;
+    text-align: center;
+    background: steelblue;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.1;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.stripe {
+    background-color: ghostwhite;
+    height: 50px;
+    text-align: center;
+    color: black;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    font-size: inherit;
+    letter-spacing: 1px;
+    transition: all;
+    outline: none;
+}
+
+button:hover {
+    color: ghostwhite;
+    background-color: steelblue;
+}
+
+#message {
+    display: inline-flex;
+    position: relative;
+    width: 20%;
+    height: 20%;
+    bottom: 15%;
+}
+
+#color-display {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.selected {
+    color: ghostwhite;
+    background-color: steelblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
